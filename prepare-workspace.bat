@@ -135,7 +135,7 @@ if not exist "%WorkspaceDir%\.metadata" (
 :: run first build, would fail
 call build.bat
 if %errorlevel% == 0 goto end
-:: revert src/.project that have been made dirty by the failing build
+:: revert src/.project that has been made dirty by the failing build
 %Git% checkout -- %ProjectHome%\src\.project
 
 :: run second build

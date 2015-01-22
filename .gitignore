@@ -1,1 +1,9 @@
 /src/.settings/language.settings.xml
+/src/arduino
+/src/Libraries
+/src/Release
+/tools/arduino
+/tools/eclipseArduino
+/src/spec.d
+/workspace/RemoteSystemsTempFiles
+/workspace/.metadata

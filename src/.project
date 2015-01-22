@@ -27,6 +27,21 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>comp</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>plat</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>Libraries/LiquidCrystal</name>
+			<type>2</type>
+			<locationURI>ArduinoLibPath/LiquidCrystal</locationURI>
+		</link>
+		<link>
 			<name>arduino/core</name>
 			<type>2</type>
 			<locationURI>ArduinoPlatformPath/cores/arduino</locationURI>
@@ -35,6 +50,16 @@
 			<name>arduino/variant</name>
 			<type>2</type>
 			<locationURI>ArduinoPinPath/mega</locationURI>
+		</link>
+		<link>
+			<name>comp/LcdKeypad</name>
+			<type>2</type>
+			<locationURI>arduino_lcdkeypad_testLcdKeypad/LcdKeypad</locationURI>
+		</link>
+		<link>
+			<name>plat/Timer</name>
+			<type>2</type>
+			<locationURI>arduino_lcdkeypad_testTimer/Timer</locationURI>
 		</link>
 	</linkedResources>
 	<variableList>

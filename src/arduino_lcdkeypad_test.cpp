@@ -3,11 +3,6 @@
 
 // Timer library, https://github.com/dniklaus/arduino-utils-timer
 #include <Timer.h>
-//#include <TimerAdapter.h>
-//#include <TimerContext.h>
-//#include <UptimeInfo.h>
-
-#include <LiquidCrystal.h>
 
 // LcdKeypad, https://github.com/dniklaus/arduino-display-lcdkeypad
 #include <LcdKeypad.h>
@@ -70,7 +65,7 @@ public:
 void setup()
 {
   Serial.begin(115200);
-  Serial.println("Hello!");
+  Serial.println("Hello from Arduino LCD Keypad Shield test!");
   myLcdKeypad = new LcdKeypad();
   myLcdKeypad->attachAdapter(new MyLcdKeypadAdapter(myLcdKeypad));
   myLcdKeypad->setBackLightOn(true);

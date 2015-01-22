@@ -32,4 +32,4 @@ Run the Eclipse Arduino Workbench with this batch:
 
 In the Eclipse Arduino Workbench select the lintilla_embedded entry in the Project Explorer (on the left-hand side) and press the Verify button, this compiles the project (and the red error icons will disappear). 
 
-![](https://github.com/ERNICommunity/lintilla-embedded/wiki/pictures/select_proj_and_press_verify.png)
+![](https://github.com/dniklaus/arduino-lcdkeypad-test/wiki/pictures/select_proj_and_press_verify.png)

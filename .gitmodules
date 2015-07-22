@@ -5,4 +5,15 @@
 [submodule "lib/comp/lcdkeypad"]
 	path = lib/comp/lcdkeypad
 	url = git@github.com:dniklaus/arduino-display-lcdkeypad.git
-	branch = Branch_1.0.2
+	branch = Branch_2.0.0
+[submodule "lib/comp/LiquidTWI2"]
+	path = lib/comp/LiquidTWI2
+	
+        url = https://github.com/lincomatic/LiquidTWI2.git
+
+        branch = master
+
+
+[submodule "lib/comp/Adafruit_MCP9808"]
+	path = lib/comp/Adafruit_MCP9808
+	url = https://github.com/dniklaus/Adafruit_MCP9808_Library.git

@@ -39,7 +39,7 @@
 		<link>
 			<name>Libraries/LiquidCrystal</name>
 			<type>2</type>
-			<locationURI>ArduinoLibPath/LiquidCrystal</locationURI>
+			<locationURI>ArduinoPivateLibPath/LiquidCrystal</locationURI>
 		</link>
 		<link>
 			<name>Libraries/Wire</name>
@@ -65,6 +65,11 @@
 			<name>comp/LcdKeypad</name>
 			<type>2</type>
 			<locationURI>arduino_lcdkeypad_testLcdKeypad/LcdKeypad</locationURI>
+		</link>
+		<link>
+			<name>comp/LiquidTWI2</name>
+			<type>2</type>
+			<locationURI>arduino_lcdkeypad_testLiquidTWI2/LiquidTWI2</locationURI>
 		</link>
 		<link>
 			<name>plat/Timer</name>

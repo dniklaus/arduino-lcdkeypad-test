@@ -8,10 +8,9 @@
 #include <LcdKeypad.h>
 
 #include "Adafruit_MCP9808.h"
-// Create the MCP9808 temperature sensor object
+
 Adafruit_MCP9808* tempsensor = 0;
 LcdKeypad* myLcdKeypad = 0;
-bool isSelectPressed = false;
 
 class MyLcdKeypadAdapter : public LcdKeypadAdapter
 {
@@ -36,48 +35,15 @@ public:
 
     if (0 != m_lcdKeypad)
     {
-      if (!isSelectPressed)
+      if (LcdKeypad::UP_KEY == newKey)
       {
-        if (LcdKeypad::SELECT_KEY == newKey)
-        {
-          isSelectPressed = true;
-        }
+        m_value++;
       }
-      else
+      else if (LcdKeypad::DOWN_KEY == newKey)
       {
-        if (LcdKeypad::UP_KEY == newKey)
-        {
-          m_value++;
-        }
-        else if (LcdKeypad::DOWN_KEY == newKey)
-        {
-          m_value--;
-        }
-
-//        m_lcdKeypad->setCursor(0, 0);
-//        m_lcdKeypad->print("Temp [°C]:  ");
-//        if (m_value < 100)
-//        {
-//          m_lcdKeypad->print(" ");
-//        }
-//        if (m_value < 10)
-//        {
-//          m_lcdKeypad->print(" ");
-//        }
-//        m_lcdKeypad->print(m_value);
-//
-//        m_lcdKeypad->setCursor(0, 1);
-//        m_lcdKeypad->print("Bin:  ");
-//
-//        for (int i = 7; i >= 0; i--)
-//        {
-//          m_lcdKeypad->print(((m_value >> i) & 1) ? "1" : "0");
-//          if (i == 4)
-//          {
-//            m_lcdKeypad->print(" ");
-//          }
-//        }
+        m_value--;
       }
+      m_lcdKeypad->setBacklight(static_cast<LcdKeypad::LcdBacklightColor>(LcdKeypad::LCDBL_WHITE & m_value));
     }
   }
 };
@@ -92,18 +58,17 @@ void setup()
   tempsensor = new Adafruit_MCP9808();
   if (!tempsensor->begin()) {
     Serial.println("Couldn't find MCP9808!");
-    while (1);
   }
 
-  myLcdKeypad = new LcdKeypad();
+  // use this line if you use a I2C based LcdKeypad shield
+  myLcdKeypad = new LcdKeypad(LcdKeypad::MCPT_MCP23017, 0x20, LcdKeypad::LCD_DT_TWI2);
+
+  // use this line if you use a 4 bit parallel data LcdKeypad shield
+//  myLcdKeypad = new LcdKeypad(LcdKeypad::LCD_DT_CRYST);
   myLcdKeypad->attachAdapter(new MyLcdKeypadAdapter(myLcdKeypad));
   myLcdKeypad->setBackLightOn(true);
 
   myLcdKeypad->setCursor(0, 0);
-//  myLcdKeypad->print("LCD Keypad Test");
-//
-//  myLcdKeypad->setCursor(0, 1);
-//  myLcdKeypad->print("Press SELECT!");
 }
 
 void loop()

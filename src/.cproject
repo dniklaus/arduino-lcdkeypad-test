@@ -28,6 +28,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/comp/Adafruit_MCP9808}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/Libraries/Wire}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/Libraries/Wire/utility}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/comp/LiquidTWI2}&quot;"/>
 								</option>
 								<inputType id="it.baeyens.arduino.compiler.cpp.sketch.input.1390940592" name="CPP source files" superClass="it.baeyens.arduino.compiler.cpp.sketch.input"/>
 							</tool>
@@ -42,6 +43,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/comp/Adafruit_MCP9808}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/Libraries/Wire}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/Libraries/Wire/utility}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/comp/LiquidTWI2}&quot;"/>
 								</option>
 								<inputType id="it.baeyens.arduino.compiler.c.sketch.input.1097646554" name="C Source Files" superClass="it.baeyens.arduino.compiler.c.sketch.input"/>
 							</tool>
@@ -69,4 +71,5 @@
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 </cproject>

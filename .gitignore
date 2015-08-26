@@ -1,9 +1,8 @@
-/src/.settings/language.settings.xml
-/src/arduino
-/src/Libraries
 /src/Release
+/workspace/.metadata
+/src/spec.d
 /tools/arduino
 /tools/eclipseArduino
-/src/spec.d
 /workspace/RemoteSystemsTempFiles
-/workspace/.metadata
+/src/.settings/language.settings.xml
+/src/.settings/org.eclipse.cdt.core.prefs

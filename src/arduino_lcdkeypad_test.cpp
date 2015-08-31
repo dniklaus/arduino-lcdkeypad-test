@@ -9,7 +9,9 @@
 
 #include "Adafruit_MCP9808.h"
 
-Adafruit_MCP9808* tempsensor = 0;
+Adafruit_MCP9808* tempsensor  = 0;
+Adafruit_MCP9808* tempsensor2 = 0;
+
 LcdKeypad* myLcdKeypad = 0;
 
 class MyLcdKeypadAdapter : public LcdKeypadAdapter
@@ -20,7 +22,7 @@ private:
 public:
   MyLcdKeypadAdapter(LcdKeypad* lcdKeypad)
   : m_lcdKeypad(lcdKeypad)
-  , m_value(0)
+  , m_value(7)
   { }
 
   void handleKeyChanged(LcdKeypad::Key newKey)
@@ -44,6 +46,8 @@ public:
         m_value--;
       }
       m_lcdKeypad->setBacklight(static_cast<LcdKeypad::LcdBacklightColor>(LcdKeypad::LCDBL_WHITE & m_value));
+      Serial.print("m_value=");
+      Serial.println(m_value);
     }
   }
 };
@@ -55,35 +59,43 @@ void setup()
 
   // Make sure the sensor is found, you can also pass in a different i2c
   // address with tempsensor.begin(0x19) for example
-  tempsensor = new Adafruit_MCP9808();
-  if (!tempsensor->begin()) {
-    Serial.println("Couldn't find MCP9808!");
+  tempsensor  = new Adafruit_MCP9808();
+  tempsensor2 = new Adafruit_MCP9808();
+
+  if (!tempsensor->begin(0x18)) {
+    Serial.println("Couldn't find MCP9808 on addr 0x18!");
   }
 
-  // use this line if you use a I2C based LcdKeypad shield
-  myLcdKeypad = new LcdKeypad(LcdKeypad::MCPT_MCP23017, 0x20, LcdKeypad::LCD_DT_TWI2);
+  if (!tempsensor2->begin(0x19)) {
+    Serial.println("Couldn't find MCP9808 on addr 0x19!");
+  }
 
-  // use this line if you use a 4 bit parallel data LcdKeypad shield
-//  myLcdKeypad = new LcdKeypad(LcdKeypad::LCD_DT_CRYST);
+  myLcdKeypad = new LcdKeypad();
+
   myLcdKeypad->attachAdapter(new MyLcdKeypadAdapter(myLcdKeypad));
   myLcdKeypad->setBackLightOn(true);
 
-  myLcdKeypad->setCursor(0, 0);
 }
 
 void loop()
 {
   // Read and print out the temperature, then convert to *F
   float c = tempsensor->readTempC();
-  float fc = c * 9.0 / 5.0 + 32;
   float f = tempsensor->readTempF();
-  Serial.print("Temp: "); Serial.print(c); Serial.print("*C\t");
-  Serial.print(f); Serial.print("*F \t");
-  Serial.print(fc); Serial.println("*F (calc)");
+  float c2 = tempsensor2->readTempC();
+  float f2 = tempsensor2->readTempF();
+  Serial.print("Temp1: "); Serial.print(c); Serial.print("*C  ");
+  Serial.print(f); Serial.print("*F");
+  Serial.print(" - Temp2: "); Serial.print(c2); Serial.print("*C  ");
+  Serial.print(f2); Serial.println("*F \t");
 
   myLcdKeypad->setCursor(0, 0);
-  myLcdKeypad->print("Temp. [*C]: ");
+  myLcdKeypad->print("Temp1 [*C]: ");
   myLcdKeypad->print(c);
+
+  myLcdKeypad->setCursor(0, 1);
+  myLcdKeypad->print("Temp2 [*C]: ");
+  myLcdKeypad->print(c2);
 
   delay(1000);
 }

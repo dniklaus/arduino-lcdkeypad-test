@@ -67,11 +67,6 @@
 			<locationURI>arduino_lcdkeypad_testLcdKeypad/LcdKeypad</locationURI>
 		</link>
 		<link>
-			<name>comp/LiquidTWI2</name>
-			<type>2</type>
-			<locationURI>arduino_lcdkeypad_testLiquidTWI2/LiquidTWI2</locationURI>
-		</link>
-		<link>
 			<name>plat/Timer</name>
 			<type>2</type>
 			<locationURI>arduino_lcdkeypad_testTimer/Timer</locationURI>

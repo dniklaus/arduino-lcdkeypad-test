@@ -5,10 +5,10 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="it.baeyens.arduino.core.toolChain.release.39589499" moduleId="org.eclipse.cdt.core.settings" name="Release">
 				<externalSettings/>
 				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
@@ -23,7 +23,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/arduino/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/comp/Adafruit_MCP9808}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/comp/LcdKeypad}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/comp/LiquidTWI2}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/plat/Timer}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/Libraries/LiquidCrystal}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/Libraries/LiquidCrystal/src}&quot;"/>
@@ -37,7 +36,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/arduino/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/arduino/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/comp/Adafruit_MCP9808}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/comp/LiquidTWI2}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/comp/LcdKeypad}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/plat/Timer}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/arduino_lcdkeypad_test/Libraries/LiquidCrystal}&quot;"/>

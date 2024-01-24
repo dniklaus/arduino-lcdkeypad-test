@@ -1,12 +1,5 @@
-// Do not remove the include below
-#include "arduino_lcdkeypad_test.h"
-
-// Timer library, https://github.com/dniklaus/arduino-utils-timer
-#include <Timer.h>
-
-// LcdKeypad, https://github.com/dniklaus/arduino-display-lcdkeypad
-#include <LcdKeypad.h>
-
+#include "SpinTimer.h"
+#include "LcdKeypad.h"
 #include "Adafruit_MCP9808.h"
 
 Adafruit_MCP9808* tempsensor  = 0;
@@ -97,6 +90,6 @@ void loop()
   myLcdKeypad->print("Temp2 [*C]: ");
   myLcdKeypad->print(c2);
 
-  delay(1000);
+  delayAndSchedule(1000);
 }
 

@@ -12,3 +12,5 @@
 /workspace/post_processing_platform.txt
 /workspace/pre_processing_boards.txt
 /workspace/pre_processing_platform.txt
+/.pio
+/.vscode

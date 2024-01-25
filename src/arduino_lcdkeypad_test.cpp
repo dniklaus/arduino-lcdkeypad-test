@@ -47,7 +47,7 @@ public:
 
 void setup()
 {
-  Serial.begin(115200);
+  Serial.begin(9600);
   Serial.println("Hello from Arduino LCD Keypad Shield test!");
 
   // Make sure the sensor is found, you can also pass in a different i2c
